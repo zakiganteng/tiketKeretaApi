@@ -9,21 +9,28 @@
  * @author Zaki
  */
 public class Gerbong {
-    private String namaGerbong;
+    private int noGerbong;
     private int nPenumpang;
     
-    public Gerbong(String nama){
-        setNama(nama);
-    }public Gerbong(String nama, int n){
-        setNama(nama);
+    public Gerbong(int no){
+        setNo(no);
+        nPenumpang=50;
+    }public Gerbong(int no, int n){
+        setNo(no);
         setNPenumpang(n);
-    }public void setNama(String nama){
-        namaGerbong=nama;
-    }public String getNama(){
-        return namaGerbong;
+    }public void setNo(int no){
+        noGerbong=no;
+    }public int getNo(){
+        return noGerbong;
     }public int getNPenumpang(){
         return nPenumpang;
     }public void setNPenumpang(int n){
         nPenumpang=n;
+    }public String toString(){
+        String s = "No Gerbong "+ getNo() +
+                   "\nKursi kosong : "+nPenumpang;
+        return s;
+    }public void tiketTerjual(int i){
+        nPenumpang=nPenumpang - i;
     }
 }

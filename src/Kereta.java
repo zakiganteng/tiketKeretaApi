@@ -13,6 +13,7 @@ public class Kereta {
     private int maxGerbong;
     private int nGerbong=0;
     private Gerbong[] g;
+    private int totalPenumpang;
     
     public Kereta(String namaKereta){
         this.namaKereta=namaKereta;
@@ -21,12 +22,13 @@ public class Kereta {
     }public Kereta(String namaKereta, int maxGerbong){
         this.namaKereta=namaKereta;
         this.maxGerbong=maxGerbong;
-        g=new Gerbong[maxGerbong];
+        g=new Gerbong[maxGerbong+1];
     }public String getNamaKereta(){
         return namaKereta;
     }public void addGerbong(Gerbong g){
         if(nGerbong<maxGerbong){
             this.g[nGerbong]=g;
+            totalPenumpang+=g.getNPenumpang();
             nGerbong++;
         }
     }public int getJumlahGerbong(){
@@ -35,6 +37,16 @@ public class Kereta {
         return g[i];
     }public void removeGerbong(){
             nGerbong--;
+    }public String toString(){
+        String s = "Nama Kereta : "+ getJumlahGerbong() +
+                   "\nBanyak gerbong : "+ getJumlahGerbong()+
+                   "\nTotal Kursi Kosong : "+ totalPenumpang;
+        return s;
+    }public void addNama(String nama){
+        this.namaKereta = nama;
+    }public void tiketTerjual(int i,int n){
+        totalPenumpang-=n;
+        getGerbong(i).tiketTerjual(n);
     }
     
 }

@@ -9,12 +9,14 @@
  * @author Zaki
  */
 public class Main {
-
+   
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Aplikasi apps = new Aplikasi();
+        apps.mainMenu();
     }
     
 }

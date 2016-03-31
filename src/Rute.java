@@ -13,6 +13,7 @@ public class Rute {
     private int totalStasiun;
     private int nStasiun=0;
     private Stasiun[] g;
+    private int maxStasiun;
     
     public Rute(String namaRute){
         this.namaRute=namaRute;
@@ -35,6 +36,10 @@ public class Rute {
         return g[i];
     }public void removeStasiun(){
             nStasiun--;
+    }public String toString(){
+        String s = "Nama Rute : "+ getNamaRute() +
+                   "\nJumlah Statsiun yang dilewati : "+getJumlahStasiun();
+        return s;
     }
     
 }

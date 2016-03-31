@@ -14,6 +14,7 @@ public class Stasiun {
     
     public Stasiun(String nama){
         setNama(nama);
+        nJalur=3;
     }public void setNama(String nama){
         namaStasiun=nama;
     }public String getNama(){
@@ -22,5 +23,9 @@ public class Stasiun {
         return nJalur;
     }public void setNJalur(int n){
         nJalur=n;
+    }public String toString(){
+        String s = "Stasiun : "+ getNama() +
+                   "  ";
+        return s;
     }
 }
