@@ -109,7 +109,6 @@ public class Aplikasi {
         menuEdit();
     }public void menuTambahRute(String s, int n){
         addRute(s,n);
-        //System.out.println("::::::"+nRute);
         menuEdit();
     }public void menuEdit(){
             System.out.println("MENU Edit: "
